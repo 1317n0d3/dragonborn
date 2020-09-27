@@ -1,14 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>GAME</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
 </head>
-<body style="margin: 0;">
+<body>
+    <div class="conteiner">
+        <div class="menu">
+            <div id="inputName">
+                <p>
+                    <b>Your name:</b>
+                    <input type="text" size="40" id="name">
+                </p>
+                <button onclick="document.location='game.html'">Continue</button>
+            </div>
+            <div class="main">
+                <div class="logo">
+                    <h1>DragonBorn</h1>
+                </div>
+                <div class="btn">
+                    <div class="start">
+                        <button id="show">Start</button>
+                    </div>
+                    <div class="inst">
+                        <button onclick="document.location='instruction.html'">Instructions</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let show = document.getElementById("show");
+        let inputName = document.getElementById("inputName");
 
-    <canvas id="canvas" style="display: block; margin: 0 auto;">Your browser is not supported.</canvas>
-
-    <script src="js/script.js"></script>
-
+        show.addEventListener("click", () => {
+            inputName.style.display = "block";
+        })
+    </script>
 </body>
 </html>
